@@ -23,6 +23,10 @@ public class StudentController {
 	@Autowired
 	private StudentService studentService;
 	
+	@GetMapping("/")
+    public String home() {
+        return "redirect:/students"; // Redirects to your students list
+    }
 	
 //	Handler method to handle all list students request
 	@GetMapping("/students")
