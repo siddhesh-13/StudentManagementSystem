@@ -48,7 +48,7 @@ public class StudentController {
 		
 		model.addAttribute("student", studentDto);
 		
-		return "create_Student";
+		return "create_student";
 	}
 	
 	
@@ -61,7 +61,7 @@ public class StudentController {
 		
 		if (bindingResult.hasErrors()) {
 			model.addAttribute("student", studentDto);
-			return "create_Student";
+			return "create_student";
 		}
 		
 		studentService.createStudent(studentDto);
