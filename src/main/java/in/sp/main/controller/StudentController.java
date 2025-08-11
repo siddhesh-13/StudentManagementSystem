@@ -116,4 +116,11 @@ public class StudentController {
 		
 		return "view_student";
 	}
+	
+//	handler method to handle /health checkpoint
+	@GetMapping("/health")
+	public String healthCheckpoint() {
+		return "UP";
+	}
+	
 }
