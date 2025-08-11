@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import in.sp.main.dto.StudentDto;
 import in.sp.main.service.StudentService;
@@ -118,7 +119,8 @@ public class StudentController {
 	}
 	
 //	handler method to handle /health checkpoint
-	@GetMapping("/health")
+	@GetMapping("/students/health")
+	@ResponseBody
 	public String healthCheckpoint() {
 		return "UP";
 	}
